@@ -20,5 +20,15 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rspec"
   s.add_development_dependency "sqlite3-ruby"
+  s.add_development_dependency 'guard'
+  s.add_development_dependency 'guard-rspec'
+  s.add_development_dependency 'rb-fsevent'
+  s.add_development_dependency 'spork', '~> 0.9.0.rc'
+  s.add_development_dependency 'guard-spork'
+  s.add_development_dependency 'guard-bundler'
+  s.add_development_dependency 'rspec-given'
+  s.add_development_dependency 'rb-inotify'
+  s.add_development_dependency 'libnotify'
+
   s.add_runtime_dependency "activerecord"
 end
