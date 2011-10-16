@@ -19,13 +19,13 @@ To use make-private private you simply have to include the module in your model,
 require 'make-private'
 
 class BusinessModel < ActiveRecord::Base
-  \#a_property: string
+  #a_property: string
   include MakePrivate
 
 end
 
 business_model = BusinessModel.new
-business_model.a_property \# This will throw a NoMethodError exception
+business_model.a_property # This will throw a NoMethodError exception
 ```
 
 Properties can be set as normal from within the model
@@ -34,7 +34,7 @@ Properties can be set as normal from within the model
 require 'make-private'
 
 class BusinessModel < ActiveRecord::Base
-  \#a_property: string
+  #a_property: string
   include MakePrivate
 
   def do_something_useful parameter
