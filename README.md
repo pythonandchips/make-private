@@ -15,7 +15,7 @@ _make-private_ is currently in development
 
 To use make-private private you simply have to include the module in your model, simple.
 
-<pre>
+```ruby
 require 'make-private'
 
 class BusinessModel < ActiveRecord::Base
@@ -26,10 +26,11 @@ end
 
 business_model = BusinessModel.new
 business_model.a_property \# This will throw a NoMethodError exception
-</pre>
+```
 
 Properties can be set as normal from within the model
-<pre>
+
+```ruby
 require 'make-private'
 
 class BusinessModel < ActiveRecord::Base
@@ -43,10 +44,11 @@ class BusinessModel < ActiveRecord::Base
 
 end
 
-</pre>
+```
 
 If you require to make a property publicaly readable set the method to public
-<pre>
+
+```ruby
 require 'make-private'
 
 class BusinessModel < ActiveRecord::Base
@@ -59,10 +61,11 @@ end
 business_model = BusinessModel.new
 business_model.a_property # This will no longer throw a NoMethodError exception
 business_model.a_property = "something interesting" # This will still throw a NoMethodError exception
-</pre>
+```
 
 Similarly if you really really really need to make the property setter public.
-<pre>
+
+```ruby
 require 'make-private'
 
 class BusinessModel < ActiveRecord::Base
@@ -75,7 +78,7 @@ end
 business_model = BusinessModel.new
 business_model.a_property # This will no longer throw a NoMethodError exception
 business_model.a_property = "something interesting" # This will not throw a NoMethodError exception
-</pre>
+```
 
 ##Notes
 
