@@ -76,3 +76,10 @@ business_model = BusinessModel.new
 business_model.a_property # This will no longer throw a NoMethodError exception
 business_model.a_property = "something interesting" # This will not throw a NoMethodError exception
 </pre>
+
+##Notes
+
+Please send any questions, comments or feedback to pythonandchips{at}gmail.com.
+
+Cheers
+Colin
