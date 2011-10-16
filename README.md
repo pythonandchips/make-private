@@ -46,7 +46,7 @@ end
 
 ```
 
-If you require to make a property publicaly readable set the method to public
+If you require to make a property publicly readable set the method to public
 
 ```ruby
 require 'make-private'
