@@ -1,5 +1,5 @@
 class Foo < ActiveRecord::Base
-  make_private
+  include MakePrivate
 
   belongs_to :bar
   has_one :qux

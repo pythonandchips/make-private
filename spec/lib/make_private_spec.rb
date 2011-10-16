@@ -1,10 +1,6 @@
 require "spec_helper"
 
 describe MakePrivate do
-  context "a class that inherit ActiveRecord::Base" do
-    Given(:foo){Foo}
-    Then{foo.should respond_to :make_private}
-  end
 
   context "a class that has a belongs to association" do
     Given(:foo){Foo.new}
@@ -65,6 +61,17 @@ describe MakePrivate do
         qux.a_prop = "hello"
       }.should_not raise_error(NoMethodError)
     end
+  end
+
+  context "should allow record to be save" do
+      Given(:value){"hello"}
+      When(:foo) do
+        foo = Foo.new
+        foo.set_property(value)
+        foo.save
+        Foo.find(foo.send(:id))
+      end
+      Then{foo.get_property.should eql value}
   end
 
 end
