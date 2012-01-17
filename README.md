@@ -1,12 +1,14 @@
 # make-private
 
-
 make-private is an ActiveRecord extension that will make all your active record properties private and give you control over what is private and what should be public.
 
 # Why make-private
 
 By default active record makes all properties and associations public which does make it faster to develop with but breaks encapsulation by default. make-private has been developed to bring back encapsulation to active record model.
 
+##Install
+
+gem install make-private
 
 ## Status
 _make-private_ is currently in development
